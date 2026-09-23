@@ -2,42 +2,39 @@
 
 ## Overview
 
-This project investigates patterns in suicide mortality across selected Asian and
-European countries, with particular emphasis on economic and demographic factors.
+This project investigates patterns in suicide mortality across selected Asian and European countries, with particular emphasis on economic and demographic factors.
 
-The analysis examines whether GDP per capita is associated with suicide rates and
-whether suicide rates differ significantly across age groups.
+The analysis examines whether GDP per capita is associated with suicide rates and whether suicide rates differ significantly across age groups.
 
-The project was originally completed as part of the Data Analysis and Statistics
-module of my MSc in Data Analytics at the University of Huddersfield.
+The project was originally completed as part of the **Data Analysis and Statistics** module of my **MSc in Data Analytics at the University of Huddersfield**.
 
 ## Research Questions
 
 1. Is there an association between GDP per capita and suicide rates?
 2. Do suicide rates differ significantly across age groups?
 
-## Data
+## Dataset
 
-The analysis integrates suicide mortality, demographic, and economic indicators
-from publicly available datasets, including:
+The analysis combines publicly available suicide, demographic and economic data obtained from sources including:
 
 - World Health Organization (WHO)
 - World Bank
 - Kaggle
 
-Variables considered include:
+The dataset contains information on:
 
 - Country
 - Year
 - Sex
 - Age group
-- Suicide count
+- Number of suicides
 - Population
 - Suicide rate per 100,000 population
 - GDP per capita
-- Continent
+- GDP for year
+- Geographic region
 
-The analysis focuses on six selected countries:
+The analysis focused on six countries with historically high suicide rates:
 
 **Asia**
 - Japan
@@ -45,86 +42,85 @@ The analysis focuses on six selected countries:
 - Kazakhstan
 
 **Europe**
+- Lithuania
 - Russian Federation
 - Ukraine
-- Lithuania
 
-## Tools & Technologies
+## Data Preparation
 
-- SAS OnDemand for Academics
-- SAS PROC CORR
-- SAS PROC GLM
-- Microsoft Excel
-- Python (data preprocessing support)
+Data preprocessing and preparation were performed using **SAS OnDemand for Academics, Python and Microsoft Excel**.
 
-## Statistical Methods
+The preparation process included:
 
-### Exploratory Data Analysis
+- Combining data from multiple sources
+- Selecting countries relevant to the study
+- Reviewing missing observations
+- Removing variables with substantial missing information
+- Creating geographic classifications
+- Preparing variables for statistical analysis
 
-Scatterplots and boxplots were used to investigate distributions, temporal
-patterns, relationships, and potential outliers.
+## Statistical Analysis
 
-### Pearson Correlation
+The project applied several statistical techniques to investigate the research questions.
 
-Pearson correlation analysis was used to investigate linear relationships between
-economic/time variables and suicide rates.
+### GDP and Suicide Rates
 
-### Linear Regression
+The relationship between economic conditions and suicide rates was investigated using:
 
-Linear regression was used to examine the association between GDP per capita and
-suicide rates.
+- Exploratory data analysis
+- Scatter plots
+- Pearson correlation analysis
+- Linear regression
+- Box plots and outlier investigation
 
-Model performance was evaluated using:
+### Age Groups and Suicide Rates
 
-- R-squared
-- Adjusted R-squared
-- Root Mean Squared Error (RMSE)
-- Regression coefficients
-- Statistical significance
+Differences in suicide rates between age categories were investigated using:
 
-### Analysis of Variance (ANOVA)
-
-One-way ANOVA was used to investigate whether mean suicide rates differed across
-age groups.
-
-### Tukey Post-hoc Analysis
-
-Following ANOVA, Tukey-adjusted pairwise comparisons were performed to investigate
-differences between individual age categories.
+- One-way Analysis of Variance (ANOVA)
+- Tukey-adjusted post-hoc comparisons
+- Least Squares Means (LSMEANS)
+- Box plots and comparative visualisations
 
 ## Key Findings
 
-The regression analysis identified a statistically significant but weak inverse
-association between GDP per capita and suicide rate. The low R-squared value
-indicated that GDP per capita alone explained only a small proportion of the
-variation in suicide rates.
+### GDP per Capita
 
-ANOVA identified statistically significant differences in suicide rates across
-age groups. Tukey-adjusted post-hoc comparisons were subsequently used to
-investigate differences between individual age categories.
+The linear regression analysis identified a statistically significant negative association between GDP per capita and suicide rates.
 
-These results demonstrate that suicide mortality is unlikely to be explained by
-economic indicators alone and highlight the importance of demographic factors
-when analysing population-level suicide patterns.
+However, the model produced an **R² of approximately 0.016**, indicating that GDP per capita alone explained only a small proportion of the variation in suicide rates.
+
+This suggests that suicide mortality is influenced by factors beyond economic conditions alone.
+
+### Age Groups
+
+ANOVA identified statistically significant differences in suicide rates across age categories (**p < 0.0001**).
+
+Age accounted for approximately **28% of the observed variation** in suicide rates within the analysed data.
+
+Tukey-adjusted post-hoc comparisons were subsequently used to investigate differences between individual age groups.
+
+## Tools & Technologies
+
+- **SAS OnDemand for Academics** – statistical analysis
+- **Python** – data preprocessing
+- **Microsoft Excel** – data preparation and inspection
+- **Statistical Methods** – Pearson Correlation, Linear Regression, ANOVA, Tukey Post-hoc Analysis
+- **Data Visualisation** – Scatter Plots, Box Plots and Comparative Charts
 
 ## Limitations
 
-This is an observational ecological analysis and the identified associations
-should not be interpreted as causal relationships.
+This analysis should be interpreted as an exploratory statistical study rather than evidence of a causal relationship between GDP and suicide mortality.
 
-The analysis also contains limitations related to missing data, country selection,
-temporal differences, and potential confounding variables.
+The analysis is subject to limitations including differences in data availability across countries and years, missing observations, country selection and the influence of socioeconomic, demographic and other factors not included in the statistical models.
 
-## Repository Structure
+## Academic Context
 
-- `data/` - Dataset used for the analysis
-- `sas/` - SAS programs for preprocessing and statistical analysis
-- `figures/` - Selected analytical visualisations
-- `report/` - Full academic report
+This project was completed as individual coursework for the **CMI3508-2324 Data Analysis and Statistics** module during my MSc in Data Analytics at the University of Huddersfield.
+
+The repository has been organised retrospectively to present the original analysis, dataset and report as part of my academic data science portfolio.
 
 ## Author
 
-**Sanchayan Vivekananthan**
-
-MSc Data Analytics (Distinction)  
-University of Huddersfield
+**Sanchayan Vivekananthan**  
+MSc Data Analytics – University of Huddersfield
