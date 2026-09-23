@@ -96,7 +96,7 @@ This suggests that suicide mortality is influenced by factors beyond economic co
 
 ANOVA identified statistically significant differences in suicide rates across age categories (**p < 0.0001**).
 
-Age accounted for approximately **28% of the observed variation** in suicide rates within the analysed data.
+The ANOVA model explained approximately 28.15% of the variation in suicide rates, indicating meaningful differences across the analysed age categories.
 
 Tukey-adjusted post-hoc comparisons were subsequently used to investigate differences between individual age groups.
 
